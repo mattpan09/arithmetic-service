@@ -19,6 +19,6 @@ jobs:
                 docker push ghcr.io/mattpan09/arithmetic-service:latest
             - name: Publish the image to azure container registry
               run: |
-                docker login --username practicum15 --password ${{secrets.AZURE_CONTAINER_REGISTRY}} practicum15registryyy.azurecr.io
+                docker login --username mattpan09 --password ${{secrets.AZURE_CONTAINER_REGISTRY}} practicum15registryyy.azurecr.io
                 docker tag ghcr.io/mattpan09/arithmetic-service:1   practicum15registryyy.azurecr.io/arithmetic-service:1
                 docker push practicum15registryyy.azurecr.io/arithmetic-service:1
